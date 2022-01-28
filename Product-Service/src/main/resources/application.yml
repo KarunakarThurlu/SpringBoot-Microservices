@@ -1,0 +1,55 @@
+
+server:
+  port: 8081
+
+    
+      
+
+
+#
+#---
+#
+#server:
+#  port: 8081
+#
+#spring:
+#  application:
+#    name: Product-Service
+#  profiles:
+#    active:
+#    - dev
+#  data:
+#    mongodb:
+#      uri: mongodb://localhost:27017/product-service
+#
+#---
+#
+#server:
+#  port: 8081
+#
+#spring:
+#  application:
+#    name: Product-Service
+#  config:
+#    activate:
+#      on-profile:
+#      - qa
+#  data:
+#    mongodb:
+#      uri: mongodb://localhost:27017/product-service
+#
+#---
+#
+#server:
+#  port: 8081
+#
+#spring:
+#  application:
+#    name: Product-Service
+#  config:
+#    activate:
+#      on-profile:
+#      - prod
+#  data:
+#    mongodb:
+#      uri: mongodb://localhost:27017/product-service

@@ -1,0 +1,23 @@
+#Eureka-Server
+server:
+  port: 8761
+spring:
+  application:
+    name: eureka-server
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+logging:
+  file:
+    name: /home/karunakar/karun/SpringBoot-Microservices/logs/Discovery-Server.log
+  logback:
+    rollingpolicy:
+      clean-history-on-start: false
+      file-name-pattern: Discovery-Server.%d{yyyy-MM-dd}.%i.log
+      max-file-size: 10GB
+      total-size-cap: 10GB
+      max-history: 6
+    
+     
+    

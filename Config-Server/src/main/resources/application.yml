@@ -1,0 +1,37 @@
+server:
+  port: ${port:8888}
+
+spring:
+  application:
+    name: config-server
+  profiles:
+    active:
+    - dev
+    - qa
+    - prod
+    default: dev
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/KarunakarThurlu/SpringCloud-ConfigServer
+          default-label: master
+          clone-on-start: false
+      allow-override: true
+      override-none: true
+      override-system-properties: true
+      fail-fast: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - refresh
+logging:
+  file:
+    name: /home/karunakar/karun/SpringBoot-Microservices/logs/Config-Server.log
+    max-size: 25MB
+    max-history: 6
+      
+
+        

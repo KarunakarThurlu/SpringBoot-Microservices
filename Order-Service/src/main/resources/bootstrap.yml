@@ -1,0 +1,91 @@
+
+---
+spring:
+  profiles:
+    active:
+    - prod
+  cloud:
+    config:
+      uri:
+      - http://localhost:8888
+      enabled: true
+    refresh:
+      enabled: true
+
+
+
+
+
+
+
+
+
+#Order-service configuration properties
+
+#---
+#server:
+# port: 8082
+#spring:
+# application:
+#   name: Order-Service
+# profiles:
+#   active:
+#   - dev
+# datasource:
+#    driver-class-name: org.postgresql.Driver
+#    url: jdbc:postgresql://localhost:5432/Microservices
+#    username: postgres
+#    password: postgres
+# jpa:
+#    show-sql: true
+#    properties:
+#        hibernate:
+#            dialect: org.hibernate.dialect.PostgreSQLDialect
+#    hibernate:
+#        ddl-auto: update
+#
+#---
+#server:
+# port: 8082
+#spring:
+# application:
+#   name: Order-Service
+# config:
+#   activate:
+#     on-profile:
+#     - qa
+# datasource:
+#    driver-class-name: org.postgresql.Driver
+#    url: jdbc:postgresql://localhost:5432/Microservices
+#    username: postgres
+#    password: postgres
+# jpa:
+#    show-sql: true
+#    properties:
+#        hibernate:
+#            dialect: org.hibernate.dialect.PostgreSQLDialect
+#    hibernate:
+#        ddl-auto: update
+#
+#---
+#server:
+# port: 8082
+#spring:
+# application:
+#   name: Order-Service
+# config:
+#   activate:
+#     on-profile:
+#     - prod
+# datasource:
+#    driver-class-name: org.postgresql.Driver
+#    url: jdbc:postgresql://localhost:5432/Microservices
+#    username: postgres
+#    password: postgres
+# jpa:
+#    show-sql: true
+#    properties:
+#        hibernate:
+#            dialect: org.hibernate.dialect.PostgreSQLDialect
+#    hibernate:
+#        ddl-auto: update

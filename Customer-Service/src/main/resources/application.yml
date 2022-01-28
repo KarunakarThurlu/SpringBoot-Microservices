@@ -1,0 +1,18 @@
+
+#Customer-Service
+server:
+  port: 8083
+
+spring:
+  application:
+    name: Customer-Service
+
+logging:
+  file:
+    name: /home/karunakar/karun/SpringBoot-Microservices/logs/Customer-Service.log
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
