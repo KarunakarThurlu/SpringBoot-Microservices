@@ -1,5 +1,6 @@
 package com.app.pojos;
 
+import java.time.LocalDate;
 import java.util.Set;
 
 import com.app.enums.Gender;
@@ -21,6 +22,7 @@ public class CustomerDTO {
 	private String  email;
 	private String  password;
 	private String  phoneNumber;
+	private LocalDate dateOfBirth;
 	private Gender  gender;
 	private Set<Address> address;
 	private Set<Roles> roles;

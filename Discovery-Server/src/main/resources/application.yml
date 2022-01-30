@@ -10,14 +10,7 @@ eureka:
     fetch-registry: false
 logging:
   file:
-    name: /home/karunakar/karun/SpringBoot-Microservices/logs/Discovery-Server.log
-  logback:
-    rollingpolicy:
-      clean-history-on-start: false
-      file-name-pattern: Discovery-Server.%d{yyyy-MM-dd}.%i.log
-      max-file-size: 10GB
-      total-size-cap: 10GB
-      max-history: 6
+    name: /home/karunakar/karun/logs/Discovery-Server.log
     
      
     

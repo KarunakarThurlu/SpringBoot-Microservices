@@ -1,0 +1,49 @@
+
+#Api Gate way
+
+server:
+  port: 2022
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+      - id: Customer-Service
+        uri: lb://Customer-Service
+        predicates:
+        - Path=/customer/**
+        filters:
+        - name: CircuitBreaker
+          args:
+            name: Customer-Service 
+            fallbackuri : forward:/customerservicefallback
+      - id: Product-Service
+        uri: lb://Product-Service
+        predicates:
+        - Path=/product/**
+        filters:
+        - name: CircuitBreaker
+          args:
+            name : Product-Service
+            fallbackuri : forward:/productservicefallback
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone : http://localhost:8761/eureka/          
+
+hystrix:
+  metrics:
+    polling-interval-ms: 4000
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream, health, info 
+

@@ -1,6 +1,8 @@
 package com.app.utils;
 
 
+import java.time.LocalDate;
+
 import com.app.entity.Customer;
 import com.app.pojos.CustomerDTO;
 
@@ -19,6 +21,8 @@ public class CustomerDTOUtil {
 		customer.setGender(customerDTO.getGender());
 		customer.setPhoneNumber(customerDTO.getPhoneNumber());
 		customer.setAddress(customerDTO.getAddress());
+		LocalDate dob= customerDTO.getDateOfBirth();
+		customer.setDateOfBirth(dob);
 		customer.setRoles(customerDTO.getRoles());
 		return customer;
 	}
@@ -31,6 +35,7 @@ public class CustomerDTOUtil {
 		customerDTO.setEmail(customer.getEmail());
 		customerDTO.setGender(customer.getGender());
 		customerDTO.setPhoneNumber(customer.getPhoneNumber());
+		customerDTO.setDateOfBirth(customer.getDateOfBirth());
 		customerDTO.setAddress(customer.getAddress());
 		customerDTO.setRoles(customer.getRoles());
 		return customerDTO;
