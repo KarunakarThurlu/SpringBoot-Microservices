@@ -1,7 +1,10 @@
 package com.app.controller;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.app.pojos.ServiceDownResponse;
 
 @RestController
 public class FallbackController {
@@ -22,9 +25,11 @@ public class FallbackController {
 	}
 	
 	@GetMapping("/stockservicefallback")
-	public String stockServiceFallBack() {
-		return "Stock-Service is down please try after some time";
+	public ServiceDownResponse stockServiceFallBack() {
+		return new ServiceDownResponse(HttpStatus.SERVICE_UNAVAILABLE,"Stock service is down please try after some time Server");
 	}
+	
+	
 
 
 }

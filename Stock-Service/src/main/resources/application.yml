@@ -1,6 +1,12 @@
 
 server:
   port: 8084
+  servlet:
+    context-path: /stock
 spring:
+  mvc:
+    converters:
+      preferred-json-mapper: gson
   application:
     name: Stock-Service
+

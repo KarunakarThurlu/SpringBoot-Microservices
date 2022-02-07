@@ -7,10 +7,11 @@ import com.app.pojos.ProductDTO;
 
 public interface IProductService {
     
-    public Product getProductById(String id);
-    public List<Product> getAllProducts();
+    public ProductDTO getProductById(String id);
+    public List<ProductDTO> getAllProducts();
     public ProductDTO addProduct(ProductDTO product);
-    public Product updateProduct(Product product);
+    public ProductDTO updateProduct(ProductDTO product);
     public void deleteProduct(String id);
+    public List<ProductDTO> getProductsOnfo(List<String> productIds);
 
 }

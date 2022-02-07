@@ -4,7 +4,9 @@ server:
 
     
       
-
+logging:
+  file:
+    name: /home/karunakar/karun/logs/Product-Service.log
 
 #
 #---

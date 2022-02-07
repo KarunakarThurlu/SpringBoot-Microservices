@@ -30,8 +30,6 @@ management:
 logging:
   file:
     name: /home/karunakar/karun/logs/Config-Server.log
-    max-size: 25MB
-    max-history: 6
       
 
         

@@ -28,6 +28,15 @@ spring:
           args:
             name : Product-Service
             fallbackuri : forward:/productservicefallback
+      - id: Stock-Service
+        uri: lb://Stock-Service
+        predicates:
+        - Path=/stock/**
+        filters:
+        - name: CircuitBreaker
+          args:
+            name : Stock-Service
+            fallbackuri : forward:/stockservicefallback
 
 eureka:
   client:
